@@ -1,0 +1,37 @@
+<app-admin></app-admin>
+<div class="container mt-5">
+    <h2>Liste des sessions</h2>
+    <a class="btn btn-success mb-3" routerLink="/session/add">Ajouter une session</a>
+    <table class="table table-striped">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Lieu</th>
+          <th scope="col">Horaire</th>
+          <th scope="col">Formateurs</th>
+          <th scope="col">Participants</th>
+          <th scope="col">Editer</th>
+          <th scope="col">Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let session of sessions; let i = index">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{session.date}}</td>
+          <td>{{session.lieu}}</td>
+          <td>{{session.horaire}}</td>
+          <td>
+            <button class="btn btn-info" [routerLink]="['/session/formateurs', session.id]">Voir les formateurs</button>
+          </td>
+          <td>
+            <button class="btn btn-info" >Voir les participants</button>
+          </td>
+          <td><a class="btn btn-primary">Editer</a></td>
+          <td><button class="btn btn-danger" (click)="deleteSession(session.id)">Supprimer</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <a class="btn btn-primary" routerLink="/formations">Retour aux formations</a>
+  </div>
+  

@@ -1,0 +1,55 @@
+<style>
+  .category-list li {
+    cursor: pointer;
+    padding: 5px 0;
+  }
+
+  .category-list li:hover {
+    text-decoration: underline;
+  }
+
+  .line {
+    border-left: 2px solid #000;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 150px; 
+  }
+
+  .title {
+    width: 100%; 
+  }
+</style>
+<app-publiques></app-publiques>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img [src]="formation?.urlPhoto" class="card-img custom-img" alt="Image">
+          </div>
+          <div class="col-md-8 d-flex flex-column">
+            <div class="card-body flex-grow-1">
+              <h3 class="card-title">{{ formation?.titre }}</h3>
+              <p class="card-text">Description:{{ formation?.description }}</p>
+              <p class="card-text">Duree: {{ formation?.duree }}</p>
+              <p class="card-text"><strong>Sessions:</strong></p>
+              <ul>
+                <li *ngFor="let session of formation?.sessions">
+                  Formateurs: {{ session.formateurs }} | Date Debut: {{ session.date }} |  Date Fin: {{ session.date + formation?.duree }}| Participant: {{ session.candidats }}
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary" (click)="register()">S'inscrire</button>
+              <button class="btn btn-secondary" (click)="downloadPDF()">PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

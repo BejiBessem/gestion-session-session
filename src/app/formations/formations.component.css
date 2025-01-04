@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    width: 500px; 
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .results-container {
+    width: 100%; 
+  }
+  
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin-left: 120px;
+  }

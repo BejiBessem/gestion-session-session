@@ -1,0 +1,30 @@
+<app-admin></app-admin>
+<a class="btn btn-success mb-3" routerLink="/formations/add">Ajouter une formation</a>
+<table class="table table-striped">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Description</th>
+      <th scope="col">Durée</th>
+      <th scope="col">Formateurs</th>
+      <th scope="col">Sessions</th>
+      <th scope="col">Editer</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let formation of formations; let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{formation.titre}}</td>
+      <td>{{formation.description}}</td>
+      <td>{{formation.duree}}</td>
+      <td>{{getFormateurs(formation)}}</td>
+      <td>
+        <button class="btn btn-info" [routerLink]="['/session', formation.id]">Voir les sessions</button>
+      </td>
+      <td><a class="btn btn-primary" [routerLink]="['/formation', 'edit', formation.id]">Editer</a></td>
+      <td><button class="btn btn-danger" (click)="deleteFormation(formation.id)">Supprimer</button></td>
+    </tr>
+  </tbody>
+</table>

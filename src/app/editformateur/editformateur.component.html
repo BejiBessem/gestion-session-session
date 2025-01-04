@@ -1,0 +1,40 @@
+<app-admin></app-admin>
+<div class="container">
+    <h2>Edit Formateur</h2>
+    <form (ngSubmit)="saveFormateur()">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="formateur.nom" name="nom" required>
+      </div>
+      <div class="mb-3">
+        <label for="prenom" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="formateur.prenom" name="prenom" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="formateur.email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="numeroTelephone" class="form-label">Numéro Téléphone</label>
+        <input type="text" class="form-control" id="numeroTelephone" [(ngModel)]="formateur.numeroTelephone" name="numeroTelephone" required>
+      </div>
+      <div class="mb-3">
+        <label for="numeroCarteIdentite" class="form-label">Numéro Carte Identité</label>
+        <input type="text" class="form-control" id="numeroCarteIdentite" [(ngModel)]="formateur.numeroCarteIdentite" name="numeroCarteIdentite" required>
+      </div>
+      <div class="mb-3">
+        <label for="photo" class="form-label">Photo</label>
+        <input type="text" class="form-control" id="photo" [(ngModel)]="formateur.photo" name="photo">
+      </div>
+      <div class="mb-3">
+        <label for="cvPdf" class="form-label">CV PDF</label>
+        <input type="text" class="form-control" id="cvPdf" [(ngModel)]="formateur.cvPdf" name="cvPdf">
+      </div>
+      <div class="mb-3">
+        <label for="urlPhoto" class="form-label">URL Photo</label>
+        <input type="text" class="form-control" id="urlPhoto" [(ngModel)]="formateur.urlPhoto" name="urlPhoto">
+      </div>
+      <button type="submit" class="btn btn-success">Editer</button>
+    </form>
+  </div>
+  

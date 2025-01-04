@@ -1,0 +1,45 @@
+<app-admin></app-admin>
+<div class="container mt-5">
+    <h2>Ajouter un formateur</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="prenom" name="prenom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="numeroTelephone">Numéro Téléphone</label>
+        <input type="text" class="form-control" id="numeroTelephone" [(ngModel)]="numeroTelephone" name="numeroTelephone" required>
+      </div>
+      <div class="form-group">
+        <label for="numeroCarteIdentite">Numéro Carte Identité</label>
+        <input type="text" class="form-control" id="numeroCarteIdentite" [(ngModel)]="numeroCarteIdentite" name="numeroCarteIdentite" required>
+      </div>
+      <div class="form-group">
+        <label for="photo">Photo</label>
+        <input type="text" class="form-control" id="photo" [(ngModel)]="photo" name="photo">
+      </div>
+      <div class="form-group">
+        <label for="cvPdf">CV PDF</label>
+        <input type="text" class="form-control" id="cvPdf" [(ngModel)]="cvPdf" name="cvPdf">
+      </div>
+      <div class="form-group">
+        <label for="specialites">Spécialités</label>
+        <input type="text" class="form-control" id="specialites" [(ngModel)]="specialites" name="specialites" required>
+        <small class="form-text text-muted">Séparez les spécialités par des virgules.</small>
+      </div>
+      <div class="form-group">
+        <label for="urlPhoto">URL Photo</label>
+        <input type="text" class="form-control" id="urlPhoto" [(ngModel)]="urlPhoto" name="urlPhoto">
+      </div>
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+  </div>
+  

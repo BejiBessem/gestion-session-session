@@ -1,0 +1,4 @@
+.custom-img {
+  height: 100%; /* Make the image take the full height of its container */
+  object-fit:fill
+}

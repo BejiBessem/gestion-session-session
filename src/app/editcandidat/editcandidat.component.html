@@ -1,0 +1,30 @@
+<app-admin></app-admin>
+<div class="container">
+    <h2>Edit Candidat</h2>
+    <form (ngSubmit)="saveCandidat()">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="candidat.nom" name="nom" required>
+      </div>
+      <div class="mb-3">
+        <label for="prenom" class="form-label">Prénom</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="candidat.prenom" name="prenom" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="candidat.email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="numeroCarteIdentite" class="form-label">Numéro Carte Identité</label>
+        <input type="text" class="form-control" id="numeroCarteIdentite" [(ngModel)]="candidat.numeroCarteIdentite" name="numeroCarteIdentite" required>
+      </div>
+      <div class="mb-3">
+        <label for="photo" class="form-label">Photo</label>
+        <input type="text" class="form-control" id="photo" [(ngModel)]="candidat.photo" name="photo">
+      </div>
+      <div class="mb-3">
+        <label for="urlPhoto" class="form-label">URL Photo</label>
+        <input type="text" class="form-control" id="urlPhoto" [(ngModel)]="candidat.urlPhoto" name="urlPhoto">
+      </div>
+      <button type="submit" class="btn btn-success">editer</button>
+  

@@ -1,0 +1,18 @@
+{
+  "routes": [
+    "/accueil",
+    "/admin",
+    "/candidat",
+    "/candidat/add",
+    "/civil",
+    "/electrique",
+    "/formateur",
+    "/formateur/add",
+    "/formation",
+    "/formations",
+    "/formations/add",
+    "/gestion",
+    "/it",
+    "/mecanique"
+  ]
+}

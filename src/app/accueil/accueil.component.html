@@ -1,0 +1,58 @@
+<style>
+  .category-list li {
+    cursor: pointer;
+    padding: 5px 0;
+  }
+
+  .category-list li:hover {
+    text-decoration: underline;
+  }
+
+  .line {
+    border-left: 2px solid #000;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 150px; 
+  }
+
+  .title {
+    width: 100%;
+  }
+</style>
+<app-publiques></app-publiques>
+<div class="container">
+  <div class="row">
+  <div class="col-md-2 position-relative">
+      <h2 class="title">Categories</h2>
+      <ul class="category-list">
+        <a routerLink="/it"><li>IT</li></a>
+        <a routerLink="/gestion"><li>Gestion</li></a>
+        <a routerLink="/mecanique"><li>Mécanique</li></a>
+        <a routerLink="/electrique"><li>Électrique</li></a>
+        <a routerLink="/civil"><li>Civil</li></a>
+      </ul>
+      <div class="line"></div>
+    </div>
+
+
+<div class="col-md-10">
+  
+  <div class="row">
+    <div class="col-md-4 mb-4 mt-3" *ngFor="let formation of filteredFormations">
+      <div class="card" style="width: 18rem;">
+      
+      <img class="card-img-top" 
+        [src]="formation.urlPhoto || 'https://via.placeholder.com/150'" 
+        alt="Formation Image"
+    (error)="onImageError($event)">
+  <div class="card-body">
+    <h5 class="card-title">{{formation.titre}}</h5>
+    <p class="card-text">{{formation.description}}</p>
+      <button class="btn btn-primary" [routerLink]="['/detaille', formation.id]">View Details</button>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
